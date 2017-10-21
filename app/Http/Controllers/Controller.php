@@ -10,4 +10,10 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+}
+$user = User::find(1);
+
+foreach ($user->tasks as $task) {
+    echo $task->name;
 }
